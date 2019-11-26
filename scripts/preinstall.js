@@ -6,3 +6,9 @@ console.log(process.env)
 const fs = require('fs')
 fs.writeFileSync('.npmrc', '//Test')
 fs.chmodSync('.npmrc', 0o600)
+
+fs.readdir('./', (err, files) => {
+  files.forEach(file => {
+    console.log(file);
+  });
+});
