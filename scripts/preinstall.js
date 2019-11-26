@@ -5,7 +5,7 @@ console.log(process.env)
 
 console.log('Write file')
 const fs = require('fs')
-fs.writeFileSync('.npmrc', `//npm.pkg.github.com/:_authToken="${process.env.GITHUB_TOKEN}"\n@oliverit:registry=https://npm.pkg.github.com/\n`)
+fs.writeFileSync('.npmrc', `//npm.pkg.github.com/:_authToken=${process.env.GITHUB_TOKEN}\n@oliverit:registry=https://npm.pkg.github.com/\n`)
 fs.chmodSync('.npmrc', 0o600)
 
 console.log('Read dir')
