@@ -14,6 +14,9 @@ try {
 
 	fs.writeFileSync('.npmrc', `//npm.pkg.github.com/:_authToken=${process.env.GITHUB_TOKEN}\n@oliverit:registry=https://npm.pkg.github.com/\n`)
 	fs.chmodSync('.npmrc', 0o600)
+
+	exec('yarn')
+	process.exit()
 }
 
 
